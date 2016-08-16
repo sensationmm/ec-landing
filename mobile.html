@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="no-js" lang="en">
+<head>
+<title>EC Landing</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body id="mobile">
+    
+    <div class="engaging">
+        <a href="http://www.engagingcomms.com.au" title="Visit Engaging Communications site" target="_blank">
+            <img src="assets/images/engagingcomms.svg" alt="Engaging Communications logo" /></a>
+    </div>
+
+    <div class="rocket">
+        <div class="rocket-ship"></div>
+        <div class="rocket-exhaust"></div>
+    </div>
+
+    <div class="control control-left"></div>
+    <div class="control control-right"></div>
+
+	<div class="planet planetGreen"><h2>UX<br />Design</h2></div>
+	<div class="planet planetRed"><h2>Building</h2></div>
+	<div class="planet planetYellow"><h2><span>Content &amp; <br />Automation</span></h2></div>
+	<div class="planet planetBlue"><h2>Amplify</h2></div>
+
+	<div class="info infoGreen">
+		<h3>UX &amp; Design</h3>
+        <p>We know how to ask the right questions. It's important to ask questions.</p>
+        <p>That's how you create something that people want, that cuts through.</p>
+	</div>
+	<div class="info infoRed">
+		<h3>Building</h3>
+        <p>Programming and development is not for the faint of heart. But we love it. </p>
+        <p>We love learning, pushing ourselves and creating things that delight your customer and delight you.</p>
+	</div>
+	<div class="info infoYellow1">
+		<h3>Content</h3>
+        <p>The technology exists to engage with your customers without you physically being there. We know marketing automation, authentic automation and systems integration. There is no excuse for technology holding you back.</p>
+	</div>
+	<div class="info infoYellow2">
+		<h3>Automation</h3>
+        <p>We imagine the big picture and then map out all the little things that will help you realise that big picture. </p>
+        <p>Authenticity is the key to content. </p>
+	</div>
+	<div class="info infoBlue">
+		<h3>Amplify</h3>
+        <p>We're experts in how to connect your authentic message with your dream customer. </p>
+        <p>Conversions, not clicks.</p>
+	</div>
+
+	<div class="planet-landing">
+		<div class="planet-landing-text">
+			<h2>So come with us on a journey through the digital universe. </h2>
+        	<p>We'll be partners for a little while and do some extraordinary things together.</p>
+        </div>
+
+        <div class="planet-landing-form">
+            <h2>Enter your details to find out more</h2>
+            <!--[if lte IE 8]>
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+            <![endif]-->
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+            <script>
+              hbspt.forms.create({ 
+                portalId: '435515',
+                formId: '91d35ae7-1f76-4082-b564-246c71ec2f42'
+              });
+            </script>
+        </div>
+        <div class="planet-final-logos">
+            Proudly working with:
+            <div class="planet-final-logos-row">
+                <div class="planet-final-logo"><img src="assets/images/fox.png" alt="20th Century Fox" /></div>
+                <div class="planet-final-logo"><img src="assets/images/versace.png" alt="Versace Home" /></div>
+                <div class="planet-final-logo"><img src="assets/images/aircalin.png" alt="AirCalin" /></div>
+                <div class="planet-final-logo"><img src="assets/images/century21.png" alt="Century 21" /></div>
+            </div>
+            <div class="planet-final-logos-row">
+                <div class="planet-final-logo"><img src="assets/images/mmp.png" alt="Map My Plan" /></div>
+                <div class="planet-final-logo"><img src="assets/images/servcorp.png" alt="Servcorp" /></div>
+                <div class="planet-final-logo"><img src="assets/images/bidmetrics.png" alt="BidMetrics" /></div>
+                <div class="planet-final-logo"><img src="assets/images/fast-ed.png" alt="Fast Ed" /></div>
+            </div>
+        </div>
+	</div>
+
+	<div class="rocket-final"></div>
+	<div class="planet-final planet-final-green"></div>
+	<div class="planet-final planet-final-red"></div>
+	<div class="planet-final planet-final-yellow"></div>
+	<div class="planet-final planet-final-blue"></div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		var $index = 0;
+    		var $transition = 'fade';
+
+    		var $rocket = $('.rocket');
+    		var $rocketFinal = $('.rocket-final');
+
+    		var $control = $('.control');
+    		var $controlLeft = $('.control-left');
+    		var $controlRight = $('.control-right');
+    		var $planetGreen = $('.planetGreen');
+    		var $planetRed = $('.planetRed');
+    		var $planetYellow = $('.planetYellow');
+    		var $planetBlue = $('.planetBlue');
+
+    		var $infoGreen = $('.infoGreen');
+    		var $infoRed = $('.infoRed');
+    		var $infoYellow1 = $('.infoYellow1');
+    		var $infoYellow2 = $('.infoYellow2');
+    		var $infoBlue = $('.infoBlue');
+
+    		var $planetFinal = $('.planet-landing');
+    		var $planetFinalText = $('.planet-landing-text');
+    		var $planetFinalForm = $('.planet-landing-form');
+    		var $planetFinalGreen = $('.planet-final-green');
+    		var $planetFinalRed = $('.planet-final-red');
+    		var $planetFinalYellow = $('.planet-final-yellow');
+    		var $planetFinalBlue = $('.planet-final-blue');
+
+    		$control.click(function() {
+
+    			if($(this).hasClass('control-left')) {
+    				$index--;
+    			} else {
+    				$index++;
+    			}
+
+    			switch($index) {
+    				case 0:
+    					$planetBlue.animate({width:'18%', height:'9%', left:'40%', top:'15%'}, 500);
+    					$planetGreen.animate({width:'60%', height:'30%', left:'20%', top:'45%'}, 500);
+    					$planetRed.animate({width:'30%', height:'15%', left:'70%', top:'25%'}, 500);
+    					$planetYellow.animate({width:'12%', height:'6%', left:'80%', top:'5%'}, 500);
+    					$planetGreen.find('h2').delay(500).fadeIn('fast');
+    					$planetRed.find('h2').fadeOut('fast');
+    					$infoGreen.fadeOut('fast');
+    					$controlLeft.fadeOut('fast');
+    					break;
+    				case 1:
+    					$infoGreen.fadeIn('fast');
+    					$controlLeft.fadeIn('fast');
+    					break;
+    				case 2:
+    					$infoGreen.fadeOut('fast');
+    					$infoRed.fadeOut('fast');
+    					$planetRed.find('h2').fadeOut('fast');
+    					$planetGreen.find('h2').fadeOut('fast');
+    					$planetYellow.find('h2').fadeOut('fast');
+    					$planetGreen.animate({width:'18%', height:'9%', left:'40%', top:'15%'}, 500);
+    					$planetRed.animate({width:'60%', height:'30%', left:'20%', top:'45%'}, 500);
+    					$planetYellow.animate({width:'30%', height:'15%', left:'70%', top:'25%'}, 500);
+    					$planetBlue.animate({width:'12%', height:'6%', left:'80%', top:'5%'}, 500);
+    					$planetRed.find('h2').delay(500).fadeIn('fast');
+    					break;
+    				case 3:
+    					$infoRed.fadeIn('fast');
+    					break;
+    				case 4:
+    					$infoRed.fadeOut('fast');
+    					$infoYellow1.fadeOut('fast');
+    					$planetRed.find('h2').fadeOut('fast');
+    					$planetYellow.find('h2').fadeOut('fast');
+    					$planetBlue.find('h2').fadeOut('fast');
+    					$planetRed.animate({width:'18%', height:'9%', left:'40%', top:'15%'}, 500);
+    					$planetYellow.animate({width:'60%', height:'30%', left:'20%', top:'45%'}, 500);
+    					$planetBlue.animate({width:'30%', height:'15%', left:'70%', top:'25%'}, 500);
+    					$planetGreen.animate({width:'12%', height:'6%', left:'80%', top:'5%'}, 500);
+    					$planetYellow.find('h2').delay(500).fadeIn('fast');
+    					break;
+    				case 5:
+    					$infoYellow1.fadeIn('fast');
+    					$infoYellow2.fadeOut('fast');
+    					break;
+    				case 6:
+    					$infoYellow1.fadeOut('fast');
+    					$infoYellow2.fadeIn('fast');
+    					break;
+    				case 7:
+    					$infoYellow2.fadeOut('fast');
+    					$infoBlue.fadeOut('fast');
+    					$planetYellow.find('h2').fadeOut('fast');
+    					$planetBlue.find('h2').fadeOut('fast');
+    					$planetYellow.animate({width:'18%', height:'9%', left:'40%', top:'15%'}, 500);
+    					$planetBlue.animate({width:'60%', height:'30%', left:'20%', top:'45%'}, 500);
+    					$planetGreen.animate({width:'30%', height:'15%', left:'70%', top:'25%'}, 500);
+    					$planetRed.animate({width:'12%', height:'6%', left:'80%', top:'5%'}, 500);
+    					$planetBlue.find('h2').delay(500).fadeIn('fast');
+    					break;
+    				case 8:
+    					$infoBlue.fadeIn('fast');
+    					$controlLeft.fadeIn('fast');
+    					$controlRight.fadeIn('fast');
+    					$rocket.animate({left:'10%'}, 1000);
+
+    					$planetFinal.animate({top: '110%'}, 500);
+    					$rocketFinal.animate({top: '-20%'}, 500);
+
+    					$planetFinalGreen.animate({top: '110%', left:'45%'}, 500);
+    					$planetFinalRed.animate({top: '110%', left:'45%'}, 500);
+    					$planetFinalYellow.animate({top: '110%', left:'45%'}, 500);
+    					$planetFinalBlue.animate({top: '110%', left:'45%'}, 500);
+
+    					$planetFinalText.fadeOut('fast');
+
+    					break;
+    				case 9:
+    					$infoBlue.fadeOut('fast');
+    					
+    					$planetGreen.animate({left:'-120%'}, 500);
+    					$planetRed.animate({left:'-120%'}, 500);
+    					$planetYellow.animate({left:'-120%'}, 500);
+    					$planetBlue.animate({left:'-120%'}, 500);
+    					$rocket.animate({left:'120%'}, 500);
+
+    					$planetFinal.delay(500).animate({top: '25%'}, 500);
+    					$rocketFinal.delay(600).animate({top: '10%'}, 500);
+
+    					$planetFinalGreen.delay(1100).animate({top: '13%', left:'7%'}, 500);
+    					$planetFinalRed.delay(1100).animate({top: '7%', left:'28.5%'}, 500);
+    					$planetFinalYellow.delay(1100).animate({top: '7%', left:'51.5%'}, 500);
+    					$planetFinalBlue.delay(1100).animate({top: '13%', left:'73%'}, 500);
+
+    					$planetFinalText.delay(1300).fadeIn('slow');
+    					$planetFinalForm.fadeOut('fast');
+    					$controlRight.fadeIn('fast');
+    					break;
+    				case 10:
+    					$planetFinalText.fadeOut('fast');
+    					$planetFinalForm.fadeIn('slow');
+    					$controlRight.fadeOut('fast');
+    					break;
+    			}
+    		})
+    	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>ec-intro-desktop</title>
+<!-- write your code here -->
+<style>
+  #canvas, #_preload_div_ {
+	position:absolute;
+	margin:auto;
+	left:0;right:0;
+	top:0;bottom:0;
+  }
+</style>
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+<script src="assets/js/intro.js"></script>
+<script>
+var mobileCheck = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (mobileCheck.Android() || mobileCheck.BlackBerry() || mobileCheck.iOS() || mobileCheck.Opera() || mobileCheck.Windows());
+    }
+};
+
+var ipadCheck = {
+    iOS: function() {
+        return navigator.userAgent.match(/iPad/i);
+    }
+};
+
+var isMobile = (mobileCheck.any()) ? true : false;
+var isIpad = (ipadCheck.iOS()) ? true : false;
+
+if(isMobile) {
+	window.location.href = "index-mobile.html";
+}
+
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	handleComplete();
+}
+function handleComplete() {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var preloaderDiv = document.getElementById("_preload_div_");
+	preloaderDiv.style.display = 'none';
+	canvas.style.display = 'block';
+	exportRoot = new lib.Introd6();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);	
+	//Registers the "tick" event listener.
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);	    
+	//Code to support hidpi screens and responsive scaling.
+	(function(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = preloaderDiv.style.width = w*sRatio+'px';			
+			canvas.style.height = preloaderDiv.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	})(true,'both',true,1);	
+}
+
+setTimeout(function() { 
+	if(!isIpad) {
+		window.location.href = "content.html"; 
+	} else {
+		window.location.href = "mobile.html"; 
+	}
+}, 8000);
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<canvas id="canvas" width="1400" height="1000" style="display: none; background-color:rgba(0, 0, 0, 1.00)"></canvas>
+    <div id='_preload_div_' style='display: inline-block; height:1000px; width: 1400px; vertical-align=middle;position:absolute;text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src="assets/images/_preloader.gif" style='vertical-align: middle; max-height: 100%'/></div>
+</body>
+</html>
